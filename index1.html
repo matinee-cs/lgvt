@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG TV MultiMovies Direct Launcher</title>
+    <style>
+        body {
+            background-color: #0b0e14;
+            color: #ffffff;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .btn {
+            background-color: #238636;
+            color: white;
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border: 3px solid #30363d;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:focus {
+            border: 5px solid #58a6ff;
+            box-shadow: 0 0 25px #58a6ff;
+            transform: scale(1.08);
+            outline: none;
+        }
+        p {
+            color: #8b949e;
+            font-size: 18px;
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📺 MultiMovies LG TV Direct Launch</h1>
+    <p>Neche diye gaye button par remote ka OK button dabayein. Ye direct site open karega.</p>
+
+    <button class="btn" tabindex="1" onclick="openSite()">▶ Open MultiMovies</button>
+
+    <script>
+        function openSite() {
+            // Direct open to bypass iframe security blocks
+            window.location.href = "https://m1.multimovies.courses/";
+        }
+
+        // Auto focus button for TV Remote
+        window.onload = function() {
+            document.querySelector('.btn').focus();
+        };
+    </script>
+</body>
+</html>
